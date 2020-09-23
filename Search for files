@@ -1,0 +1,47 @@
+# Search for files
+
+    - Using 'find' Command
+
+    Become a root user
+
+    sudo su
+
+    
+    - Create a files
+
+    touch /etc/test.txt
+
+    - Find above file
+
+    find -name "test.txt"  (test.txt=fileName)
+    // can not find because it is looking in current directory
+
+    - See the files list in this directory
+
+    ls -la
+
+drwxr-xr-x 4 cloud_user cloud_user  4096 Sep 15 02:43 .     (here '.' means current directory)
+drwxr-xr-x 6 root       root        4096 Oct  9  2018 ..    (here '..' means parent directory)
+
+    - Let's search from root file system
+
+    find / -name "test.txt"     (here '/' means root and searching for all files with that name)
+
+     find /etc -name "test.txt" (This will only search for files in /etc directory)
+
+
+    - Find all the partitions in human readable format
+
+    df -h
+
+    // dev/nvme0n1p1   20G  3.7G   16G  20% /
+    // Above is the root file system
+
+
+
+
+
+
+
+
+
