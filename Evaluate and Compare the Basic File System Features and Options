@@ -1,0 +1,12 @@
+# Evaluate and Compare the Basic File System Features and Options
+
+    - Ext4 file System (Open source)
+    - B-Tree file System (Btrfs) developed by oracle
+    - ReiserFS - in 2001, is a general-purpose, journaling file system
+    - ZFS designed by sun microsystem
+    - XFS similar to Ext4
+    - JFS (Journaled File System) by IBM
+    - SWAP Not a actual file system, is a virtual memory
+    - Fat microsoft file system, great for usb , cross platform
+    
+
