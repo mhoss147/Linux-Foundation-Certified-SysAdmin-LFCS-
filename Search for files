@@ -178,7 +178,27 @@ ls -la "test.txt"
 
 
 
+# Using 'locate' command
 
+    - To find a file using 'locate' command
+
+    locate test.txt
+    // Cannot find it? Use 'updatedb' command
+
+
+    sudo updatedb
+    locate test.txt
+/etc/test.txt
+/home/cloud_user/test.txt
+
+
+
+
+
+
+
+
+ 
 
 
 
