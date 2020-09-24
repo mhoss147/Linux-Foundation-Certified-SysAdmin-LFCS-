@@ -34,8 +34,152 @@ drwxr-xr-x 6 root       root        4096 Oct  9  2018 ..    (here '..' means par
 
     df -h
 
-    // dev/nvme0n1p1   20G  3.7G   16G  20% /
-    // Above is the root file system
+    dev/nvme0n1p1   20G  3.7G   16G  20% /
+    tmpfs           2.0G     0  2.0G   0% /dev/shm
+
+    // Above is the root file system, dev means device, tmpfs means temporary file system (in RAM)
+    // Everything in linux is a file even if it is not written in magnetic disk
+
+    - Copy a file to new file (also create a that new file)
+
+    cp /etc/test.txt /etc/TEST.txt
+
+
+    - Search for both files (test and TEST) by ignoring the lower and CAPITAL letter
+
+    find / -iname "test.txt"        // here 'i' for ignoring lower and CAPITAL letters
+
+    
+    - Search all except thisFile (test.txt)
+
+    find /etc -not -name "test.txt"
+
+
+    - Search all except theseFiles (test and TEST),  by ignoring the lower and CAPITAL letter
+
+    find /etc -not -iname "test.txt"        // here 'i' for ignoring lower and CAPITAL letters
+
+
+    - Find all the character devices
+
+    find / -type c
+
+
+    - Find all the links
+
+    find / -type l
+
+    
+    - Find all the directories in the system
+
+    find / -type d
+
+
+    - Search all the files ending with .log
+
+    find / -type f -name "*.log"        (here 'f' is for files)
+
+
+    - Find all the directories called log
+
+    find / -type d -name "log"      (here 'd' is for directories)
+
+
+    - Search everthing in bin more than 27k character
+
+    find /usr/bin -size +27000c
+
+
+    - Search everthing in bin more than 1MB 
+
+    find /usr/bin -size +1M
+
+
+
+    - Search file using time stamp
+// will show all the files created 1 day ago
+
+    find / -type f -mtime 1
+
+// randomly pick a file and Verify
+
+
+    ls -la /etc/ssh/ssh_host_rsa_key
+
+
+// will show all the files created less than a day ago
+
+    find / -type f -mtime -1
+
+// randomly pick a file and Verify
+
+    ls -la /sys/module/crc32_pclmul/sections/.text
+
+
+- Find all the files owned by particular user
+
+find / -user cloud_user     (cloud_user = userName) 
+
+
+- Find all the files owned by particular user, in a particular directory
+
+
+find /etc -user root | more     (root = userName, /etc = directorName) 
+
+
+- Find file by permission
+
+// I want to find Everything in /usr/bin directory by All permission by owner and 
+// read + execute permission by group and world
+// Go to root
+sudo su
+find /usr/bin -perm 755
+
+
+// Take a look at the actual permission of /usr/bin
+ls -la /usr/bin
+
+
+- Find the permission in particular file
+
+ls -la "text.txt"       (text.txt=fileName)
+-rw-r--r-- 1 cloud_user cloud_user 0 Sep 24 16:45 test.txt
+
+
+- Change the permission in above file
+
+sudo find / -name "test.txt" -exec chmod 700 {} \;
+// 'exec' is for execution command, here executing chmod, {}\; = place holder 
+// Verify this
+
+ls -la "test.txt" 
+-rwx------ 1 cloud_user cloud_user 0 Sep 24 16:45 test.txt
+// ok
+
+
+- Change back to previous level permission
+
+sudo find / -name "test.txt" -exec chmod 644 {} \;
+// Verify this
+
+ls -la "test.txt" 
+-rw-r--r-- 1 cloud_user cloud_user 0 Sep 24 16:45 test.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
