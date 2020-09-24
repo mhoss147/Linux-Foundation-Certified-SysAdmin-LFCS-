@@ -167,6 +167,20 @@ ls -la "test.txt"
 
 
 
+# Using 'which' command
+
+
+    - To see which utility is running or where it's loading from (if you have different version of same utility)
+
+    which python        (python = utilityName)
+
+    which ifconfig      (ifconfig=utilityName)
+
+
+
+
+
+
 
 
 
