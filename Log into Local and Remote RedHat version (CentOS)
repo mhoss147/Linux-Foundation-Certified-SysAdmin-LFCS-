@@ -1,0 +1,15 @@
+# Log into Local and Remote Graphical and Text Mode Consoles - Redhat Version (CentOS)
+
+
+- Connect to remote machine using Text
+
+$ ssh userName@publicIP (Use userName and the publicIP of the machine you want to connect)
+
+//say yes
+// Enter password of the remote machine
+
+
+- Connect to remote machine using GUI
+// Download and install VNC Viewer in your machine
+// Open vnc > In search bar type machine name you want to connect > click continue
+// Enter userName and password of the remote machine
