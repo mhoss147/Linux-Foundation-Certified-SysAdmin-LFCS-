@@ -54,7 +54,7 @@ honey
     cat hardwarelist.txt shoppinglist.txt | sort
 
 
-    // Combine above both files and put Output in another NewFile
+    // Combine above both files and put Output in another NewFile by creating it
 
     cat hardwarelist.txt shoppinglist.txt | sort > combine.txt
 
