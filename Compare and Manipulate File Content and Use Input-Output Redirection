@@ -1,0 +1,91 @@
+#Compare and Manipulate File Content and Use Input-Output Redirection
+
+
+    - CHeck the file list
+
+    ls -la
+
+
+    - Create a text file shopping list
+
+    touch shoppinglist.text
+
+
+    - Put a shopping list there
+
+    vim shoppinglist
+Bread
+egg
+milk 
+cheese
+butter
+nuts 
+honey
+....            
+// make a long list of 2 - 3 pages
+// You can use mouse to scroll up and down the list
+    
+
+    - Another option to use is pipe with 'more' command
+    // Hit 'enter' to scroll down
+
+    cat shoppinglist.txt | more
+
+    cat shoppinglist.txt | less
+
+    // if the shoppinglist is not entered in alphabiitical order, you can sort this way
+
+    sort shopping.txt
+
+
+    sort shopping.txt | more
+
+    // Create a hardwarelist
+    vim hardwarelist.txt
+
+
+    // Display hardwarelist and shoppinglist together
+
+    cat hardwarelist.txt shoppinglist.txt 
+
+
+    // Sort both files together
+
+    cat hardwarelist.txt shoppinglist.txt | sort
+
+
+    // Combine above both files and put Output in another NewFile
+
+    cat hardwarelist.txt shoppinglist.txt | sort > combine.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
