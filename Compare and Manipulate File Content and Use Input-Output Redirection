@@ -57,7 +57,22 @@ honey
     // Combine above both files and put Output in another NewFile by creating it
 
     cat hardwarelist.txt shoppinglist.txt | sort > combine.txt
+------------------------------
 
+
+# fmt - simple optimal text formatter
+
+    // Create a new file with some unnecessary space in between words
+
+
+    vim format.txt
+
+    cat format.txt
+this                 file               has     weird    spaces
+
+    // Remove the spaces from above file in display
+    fmt -u format.txt 
+this file has weird spaces
 
 
 
